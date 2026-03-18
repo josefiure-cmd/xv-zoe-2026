@@ -1,0 +1,54 @@
+:root{--burg:#781424;--burg2:#4d0f1a;--soft:#f6e4e9;--line:#e5c9d2;--txt:#4a1e26}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font-family:Poppins,system-ui,Segoe UI,Roboto,Arial;color:var(--txt)}
+
+/* Portada vino tinto */
+.splash{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:linear-gradient(180deg,#fff5f7,#f6e4e9);text-align:center}
+.mis{font-family:'Great Vibes',cursive;font-size:42px;color:var(--burg)}
+.xv{font-family:'Playfair Display',serif;font-size:120px;letter-spacing:2px;color:var(--burg);display:block;line-height:.8}
+.nombre{font-family:'Great Vibes',cursive;font-size:48px;color:var(--burg)}
+.fecha{margin:6px 0 10px;opacity:.8}
+.mono{width:90px;display:block;margin:6px auto;filter: drop-shadow(0 6px 12px rgba(77,15,26,.15));}
+.carta-mini{width:120px;height:auto;margin:4px auto 6px;filter: drop-shadow(0 6px 12px rgba(77,15,26,.08));}
+.playhint{font-family:'Great Vibes',cursive;color:#b85c73;font-size:24px;margin-top:6px}
+.btn-ghost{border:2px solid #c07a8c;background:#fff;border-radius:999px;padding:10px 16px;color:#7a2d3a;font-weight:700}
+
+/* Header con foto */
+.hero{position:relative;display:grid;place-items:center;padding:10px;border-top:2px dashed var(--line);border-bottom:2px dashed var(--line);background:#fff}
+.hero-photo{width:min(92vw,560px);height:auto;border-radius:16px;border:2px solid var(--line)}
+.btn-circular{position:absolute;right:calc(50% - 280px);bottom:14px;width:56px;height:56px;border-radius:50%;border:2px solid #c07a8c;background:#fff;color:var(--burg);font-weight:900}
+@media(max-width:620px){.btn-circular{right:16px;bottom:12px}}
+
+/* Frase */
+.frase{padding:16px}
+.frase .marco{max-width:620px;margin:0 auto;background:#fff;border:2px dashed var(--line);border-radius:16px;padding:18px;text-align:center}
+
+/* Contador */
+.contador{text-align:center;padding:10px}
+.script{font-family:'Great Vibes',cursive;color:var(--burg);font-size:34px;margin:6px 0}
+.reloj{display:flex;justify-content:center;align-items:baseline;gap:8px}
+.dig{font-size:46px;font-weight:800;background:linear-gradient(180deg,#a31b4a,#ff8fb3);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sep{font-size:40px;color:#b85c73}
+.etq{display:flex;justify-content:center;gap:30px;font-size:12px;letter-spacing:1px;opacity:.8;margin-top:4px}
+.leyenda{margin:10px 0 0;font-weight:700;letter-spacing:2px}
+
+/* Datos */
+.datos{padding:10px 16px;text-align:center}
+.ribbon{font-family:'Great Vibes',cursive;color:var(--burg);font-size:32px;margin:8px 0 2px}
+.nombre-completo{font-size:16px;letter-spacing:.5px}
+.padres{font-size:15px}
+
+/* Recepción */
+.recepcion{padding:10px 16px 20px;text-align:center}
+.cuando,.donde{font-weight:700;letter-spacing:1px}
+.acciones{margin-top:8px}
+.pill{display:inline-block;border-radius:999px;padding:10px 16px;border:2px solid #c07a8c;color:#7a2d3a;text-decoration:none;font-weight:700}
+.pill.strong{background:linear-gradient(180deg,#ffd1dd,#ffc0d1);border:0;color:#6b2c40}
+
+/* Lluvia de sobres */
+.obsequio{padding:8px 16px 0;text-align:center}
+.obsequio .sobre-mini{width:100px;height:auto;display:block;margin:6px auto 0}
+
+/* Final */
+.final{padding:18px 16px 40px;text-align:center}
+.final .grande{font-size:26px}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mis XV – Zoe | Invitación</title>
+  <meta name="theme-color" content="#4d0f1a"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- Portada: ahora muestra una CARTA pequeña con el botón debajo; la frase va debajo -->
+  <section id="splash" class="splash">
+    <div class="top">
+      <span class="mis">Mis</span>
+      <span class="xv">XV</span>
+      <span class="nombre">Zoe</span>
+      <img src="images/mono.png" alt="Moño" class="mono"/>
+      <p class="fecha">01 de agosto de 2026</p>
+    </div>
+
+    <img src="images/sobre_pequeno.png" alt="Carta" class="carta-mini"/>
+    <button id="btn-abrir" class="btn-ghost">Haz click aquí</button>
+    <p class="playhint">Dale play a mi canción favorita</p>
+  </section>
+
+  <!-- Invitación con foto principal -->
+  <main id="invitacion" hidden>
+    <header class="hero">
+      <img src="images/foto_principal.jpg" alt="Foto principal" class="hero-photo"/>
+      <button id="btn-musica" class="btn-circular" aria-pressed="false">▶</button>
+      <audio id="audio" preload="none">
+        <source src="media/favorita.mp3" type="audio/mpeg"/>
+      </audio>
+    </header>
+
+    <section class="frase">
+      <div class="marco">
+        La vida está hecha de momentos inolvidables, y uno de los más especiales está por llegar. Mis XV años son un sueño que quiero compartir contigo.
+      </div>
+    </section>
+
+    <section class="contador" aria-live="polite">
+      <h2 class="script">¡Tan solo faltan!</h2>
+      <div class="reloj">
+        <div class="dig" id="D">00</div>
+        <div class="sep">:</div>
+        <div class="dig" id="H">00</div>
+        <div class="sep">:</div>
+        <div class="dig" id="M">00</div>
+        <div class="sep">:</div>
+        <div class="dig" id="S">00</div>
+      </div>
+      <div class="etq">
+        <span>DÍAS</span><span>HORAS</span><span>MINUTOS</span><span>SEGUNDOS</span>
+      </div>
+      <p class="leyenda">PARA ESTE DÍA TAN ESPECIAL</p>
+    </section>
+
+    <section class="datos">
+      <h3 class="ribbon">Quinceañera</h3>
+      <p class="nombre-completo">Zoe Alexa Pacheco Gonzalez</p>
+      <h4 class="ribbon">Yo junto con</h4>
+      <h3 class="ribbon">Mis Padres</h3>
+      <p class="padres">José de Jesús Pacheco Villalpando<br/>y<br/>Lucy González Guevara</p>
+    </section>
+
+    <section class="recepcion">
+      <h3 class="ribbon">Recepción</h3>
+      <p class="cuando">SÁBADO 01 DE AGOSTO DE 2026 · 7:00 P.M.</p>
+      <p class="donde">LOMAS DEL MIRADOR</p>
+      <div class="acciones">
+        <a id="btn-ubicacion" class="pill" target="_blank" rel="noopener" href="#">VER UBICACIÓN</a>
+      </div>
+    </section>
+
+    <section class="obsequio">
+      <h3 class="ribbon">Lluvia de Sobres</h3>
+      <img src="images/sobre_pequeno.png" alt="Sobre pequeño" class="sobre-mini"/>
+    </section>
+
+    <section class="final">
+      <p class="script grande">¡Nos encantaría contar con su presencia!</p>
+      <a id="btn-rsvp" class="pill strong" target="_blank" rel="noopener" href="#">CONFIRMAR ASISTENCIA</a>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
