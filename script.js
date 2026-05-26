@@ -1,6 +1,6 @@
 const CONFIG = {
   fechaEventoISO: '2026-08-01T19:00:00',
-  telefonoRSVP: '66584512142',
+  telefonoRSVP: '6658512142',
   mensajeRSVP: 'Hola, confirmo mi asistencia a los XV de Zoe Alexa. Somos ___ adultos y ___ niños.',
   urlMapa: 'https://maps.app.goo.gl/BpvXv8BAkQ9WtZ5G7'
 };
