@@ -1,7 +1,7 @@
 /* ------------------------------
    IMPORTACIÓN DE FUENTES
 ------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght=0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* ------------------------------
    RESET Y BASE
@@ -132,10 +132,11 @@ body {
 }
 
 /* ------------------------------
-   INVITACIÓN
+   INVITACIÓN GENERAL
 ------------------------------ */
 #invitacion {
   padding-bottom: 60px;
+  text-align: center;
 }
 
 .hero-photo {
@@ -210,66 +211,52 @@ body {
   font-size: 52px;
   font-weight: 700;
   margin: 36px 0 15px 0;
-  color: #4d0f1a; /* Títulos de sección en vino */
+  color: #4d0f1a;
 }
 
-/* Estilo idéntico al de Zoe Alexa para todos los nombres largos */
 .nombre-completo,
 .padres,
 .padrinos {
   font-family: 'Great Vibes', cursive;
-  font-size: 38px; /* Tamaño elegante para que resalten */
+  font-size: 38px;
   display: block;
   margin-bottom: 25px;
   line-height: 1.4;
-
-  /* EFECTO DE ORO BRILLANTE EN DEGRADADO */
   background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  /* Sombra sutil idéntica para dar relieve tridimensional */
   filter: drop-shadow(1.5px 2px 2px rgba(77, 15, 26, 0.12));
 }
 
 /* ------------------------------
-   MISA / RECEPCIÓN
+   MISA / RECEPCIÓN / RSVP
 ------------------------------ */
-.misa {
+.misa, .recepcion, .obsequio, .rsvp {
   margin: 50px 0;
+  text-align: center;
 }
 
-.misa .cuando {
+.misa .cuando, .recepcion .cuando {
   font-size: 20px;
   font-weight: 500;
 }
 
-.misa .donde {
+.misa .donde, .recepcion .donde {
   font-size: 17px;
   margin-top: 5px;
   opacity: 0.9;
 }
 
-.pill {
-  display: inline-block;
-  padding: 14px 32px;
-  background: linear-gradient(135deg, #bf953f, #aa771c);
-  color: #fff;
-  border-radius: 35px;
-  text-decoration: none;
-  margin-top: 20px;
-  font-size: 18px;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+.texto-final {
+  font-family: 'Great Vibes', cursive;
+  font-size: 42px;
+  color: #4d0f1a;
+  margin-bottom: 10px;
 }
 
 /* ------------------------------
-   CORRECCIÓN DE CENTRADO GENERAL
+   ELEMENTOS CENTRADOS Y BOTONES
 ------------------------------ */
-.misa, .recepcion, .obsequio, .rsvp, #invitacion {
-  text-align: center;
-}
-
 .mono, .sobre-mini, .carta-mini {
   display: block;
   margin-left: auto;
@@ -285,8 +272,20 @@ body {
   margin: 20px auto;
 }
 
+.pill {
+  display: inline-block;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #bf953f, #aa771c);
+  color: #fff;
+  border-radius: 35px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
 /* ------------------------------
-   RESPONSIVE (AJUSTE PARA MÓVIL)
+   RESPONSIVE (AL FINAL PARA QUE SEA EFECTIVO)
 ------------------------------ */
 @media (max-width: 480px) {
   .mis {
@@ -300,12 +299,15 @@ body {
     margin-top: -10px;
   }
   .ribbon {
-    font-size: 28px;
+    font-size: 38px;
   }
   .nombre-completo,
   .padres,
   .padrinos {
-    font-size: 32px; /* Reducción a un tamaño óptimo para que quepan completos en pantallas de celulares sin romperse */
+    font-size: 32px;
+  }
+  .texto-final {
+    font-size: 34px;
   }
   .dig {
     width: 55px;
