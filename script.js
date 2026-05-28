@@ -1,4 +1,6 @@
+// -----------------------------------------
 // CONFIGURACIÓN GENERAL
+// -----------------------------------------
 const CONFIG = {
   fechaEventoISO: '2026-08-01T19:00:00',
   telefonoRSVP: '6658512142',
@@ -8,21 +10,36 @@ const CONFIG = {
 
 const $ = s => document.querySelector(s);
 
-// ----------------------
-// ABRIR INVITACIÓN
-// ----------------------
+// -----------------------------------------
+// ABRIR INVITACIÓN + ANIMACIONES
+// -----------------------------------------
 $('#btn-abrir').addEventListener('click', ()=>{
-  $('#invitacion').hidden = false;
-  $('#splash').style.display = 'none';
 
-  // Reproducir música
+  // Mostrar invitación
+  $('#invitacion').hidden = false;
+
+  // Animación del sobre
+  $('#splash').classList.add('sobre-abierto');
+  $('#splash').classList.add('oculto');
+
+  // Animación de entrada de la invitación
+  $('#invitacion').classList.add('visible');
+
+  // Activar animación de secciones
+  setTimeout(()=>{
+    document.querySelectorAll('.fade-section').forEach(sec=>{
+      sec.classList.add('visible');
+    });
+  }, 800);
+
+  // Activar música
   const audio = $('#audio');
   audio.play().catch(()=>{});
 });
 
-// ----------------------
-// BOTÓN MÚSICA
-// ----------------------
+// -----------------------------------------
+// BOTÓN DE MÚSICA
+// -----------------------------------------
 const audio = $('#audio');
 const btnM = $('#btn-musica');
 
@@ -39,9 +56,9 @@ btnM.addEventListener('click', function(){
   }
 });
 
-// ----------------------
-// LINKS DINÁMICOS
-// ----------------------
+// -----------------------------------------
+// LINKS DINÁMICOS (RSVP + MAPA)
+// -----------------------------------------
 (function(){
   const msg = encodeURIComponent(CONFIG.mensajeRSVP);
   const rsvp = $('#btn-rsvp');
@@ -51,9 +68,24 @@ btnM.addEventListener('click', function(){
   if(mapa) mapa.href = CONFIG.urlMapa;
 })();
 
-// ----------------------
-// CONTADOR
-// ----------------------
+// -----------------------------------------
+// CONTADOR CON ANIMACIÓN FLIP
+// -----------------------------------------
+function animarCambio(digElemento, nuevoValor) {
+  const span = digElemento.querySelector('span');
+  const valorActual = span.textContent;
+
+  if (valorActual === nuevoValor) return;
+
+  digElemento.setAttribute('data-next', nuevoValor);
+  digElemento.classList.add('animar');
+
+  setTimeout(() => {
+    span.textContent = nuevoValor;
+    digElemento.classList.remove('animar');
+  }, 400);
+}
+
 (function(){
   const fechaTexto = $(".fecha").textContent.trim();
 
@@ -80,10 +112,10 @@ btnM.addEventListener('click', function(){
     const m = Math.floor(diff/60000); diff -= m*60000;
     const s = Math.floor(diff/1000);
 
-    D.textContent = String(d).padStart(2,'0');
-    H.textContent = String(h).padStart(2,'0');
-    M.textContent = String(m).padStart(2,'0');
-    S.textContent = String(s).padStart(2,'0');
+    animarCambio(D, String(d).padStart(2,'0'));
+    animarCambio(H, String(h).padStart(2,'0'));
+    animarCambio(M, String(m).padStart(2,'0'));
+    animarCambio(S, String(s).padStart(2,'0'));
   }
 
   setInterval(upd, 1000);
