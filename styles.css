@@ -24,7 +24,7 @@ body {
 ------------------------------ */
 .splash {
   text-align: center;
-  padding: 40px 20px;
+  padding: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -33,57 +33,61 @@ body {
 }
 
 .splash .top {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .mis {
   font-family: 'Great Vibes', cursive;
-  font-size: 48px;
-  color: #4d0f1a; /* Cambiado a tu tono vino base para que tenga máximo contraste */
+  font-size: 60px; /* Tamaño aumentado */
+  color: #4d0f1a;
   display: block;
+  line-height: 1.2;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
 }
 
 .xv {
   font-family: 'Playfair Display', serif;
-  font-size: 85px;
+  font-size: 130px; /* Tamaño extra grande para el impacto */
   font-weight: 700;
-  color: #4d0f1a; /* Tono vino elegante y fuerte */
-  letter-spacing: 4px;
+  color: #4d0f1a;
+  letter-spacing: 6px;
   display: block;
-  line-height: 1;
+  line-height: 0.8; /* Interlineado ajustado para que el nombre quede cerca */
+  margin: 10px 0;
 }
 
 .nombre {
   font-family: 'Great Vibes', cursive;
-  font-size: 75px; /* Un poco más grande para resaltar */
-  color: #d4af37; /* ¡Dorado intenso / Oro brillante! */
+  font-size: 100px; /* Nombre mucho más grande */
+  color: #d4af37; /* Dorado intenso */
   display: block;
-  margin-top: -5px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.15); /* Sombra más marcada para que no sea opaca */
+  margin-top: -20px; /* Ajuste para que se vea entrelazado con el XV */
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
 }
 
 .fecha {
-  margin-top: 10px;
-  font-size: 18px;
-  letter-spacing: 1px;
+  margin-top: 20px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 
 .carta-mini {
-  width: 160px;
-  margin: 20px auto;
+  width: 180px;
+  margin: 30px auto;
 }
 
 .btn-ghost {
-  padding: 12px 25px;
-  border: 2px solid #d4af37; /* Borde dorado intenso */
+  padding: 14px 30px;
+  border: 2px solid #d4af37;
   background: transparent;
-  color: #d4af37; /* Texto dorado intenso */
-  font-size: 18px;
-  border-radius: 30px;
+  color: #d4af37;
+  font-size: 20px;
+  border-radius: 40px;
   cursor: pointer;
   transition: 0.3s;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .btn-ghost:hover {
@@ -104,7 +108,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #d4af37; /* Botón dorado intenso */
+  background: #d4af37;
   color: #fff;
   border: none;
   font-size: 22px;
@@ -132,12 +136,12 @@ body {
    FRASE
 ------------------------------ */
 .frase .marco {
-  margin: 25px auto;
-  padding: 20px;
+  margin: 35px auto;
+  padding: 25px;
   width: 85%;
-  border-left: 4px solid #d4af37; /* Líneas doradas más vivas */
-  border-right: 4px solid #d4af37;
-  font-size: 18px;
+  border-left: 5px solid #d4af37;
+  border-right: 5px solid #d4af37;
+  font-size: 20px;
   text-align: center;
   font-style: italic;
 }
@@ -147,28 +151,28 @@ body {
 ------------------------------ */
 .contador {
   text-align: center;
-  margin: 40px 0;
+  margin: 50px 0;
 }
 
 .reloj {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  margin: 15px 0;
+  gap: 12px;
+  margin: 20px 0;
 }
 
 .dig {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
-  width: 60px;
-  padding: 10px 0;
+  width: 70px;
+  padding: 15px 0;
   background: #fff;
-  border-radius: 10px;
-  border: 2px solid #d4af37; /* Bordes del reloj más vivos */
+  border-radius: 12px;
+  border: 2px solid #d4af37;
 }
 
 .sep {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: #d4af37;
 }
@@ -176,15 +180,9 @@ body {
 .etq {
   display: flex;
   justify-content: center;
-  gap: 25px;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-.leyenda {
-  margin-top: 10px;
+  gap: 35px;
   font-size: 14px;
-  opacity: 0.7;
+  margin-top: 5px;
 }
 
 /* ------------------------------
@@ -197,87 +195,59 @@ body {
 
 .ribbon {
   font-family: 'Playfair Display', serif;
-  font-size: 26px;
+  font-size: 32px;
   font-style: italic;
   letter-spacing: 1px;
-  margin: 15px 0;
-  color: #4d0f1a; /* Títulos de secciones en vino para máxima legibilidad */
-  font-weight: 600;
+  margin: 20px 0;
+  color: #4d0f1a;
+  font-weight: 700;
 }
 
 .nombre-completo,
 .padres,
 .padrinos {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 /* ------------------------------
    MISA
 ------------------------------ */
 .misa {
-  margin: 40px 0;
-}
-
-.misa .cuando {
-  font-size: 18px;
-  margin-top: 10px;
-}
-
-.misa .donde {
-  font-size: 16px;
-  margin-top: 5px;
+  margin: 50px 0;
 }
 
 .pill {
   display: inline-block;
-  padding: 12px 25px;
-  background: #d4af37; /* Botones de pase/mapa en dorado encendido */
+  padding: 14px 30px;
+  background: #d4af37;
   color: #fff;
-  border-radius: 30px;
+  border-radius: 35px;
   text-decoration: none;
-  margin-top: 15px;
-  font-size: 16px;
-  font-weight: 500;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /* ------------------------------
-   RSVP
------------------------------- */
-.rsvp {
-  text-align: center;
-  margin: 40px 0;
-}
-
-/* ------------------------------
-   RESPONSIVE
+   RESPONSIVE (AJUSTE PARA MÓVIL)
 ------------------------------ */
 @media (max-width: 480px) {
+  .mis {
+    font-size: 50px;
+  }
   .xv {
-    font-size: 65px;
+    font-size: 100px;
   }
-
   .nombre {
-    font-size: 52px;
+    font-size: 75px;
+    margin-top: -15px;
   }
-
   .dig {
-    width: 50px;
-    font-size: 32px;
+    width: 55px;
+    font-size: 36px;
   }
-
   .sep {
-    font-size: 32px;
-  }
-
-  .etq span {
-    font-size: 10px;
-  }
-
-  #btn-musica {
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
+    font-size: 36px;
   }
 }
