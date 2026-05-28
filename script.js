@@ -1,3 +1,4 @@
+// CONFIGURACIÓN GENERAL
 const CONFIG = {
   fechaEventoISO: '2026-08-01T19:00:00',
   telefonoRSVP: '6658512142',
@@ -7,32 +8,55 @@ const CONFIG = {
 
 const $ = s => document.querySelector(s);
 
+// ----------------------
+// ABRIR INVITACIÓN
+// ----------------------
 $('#btn-abrir').addEventListener('click', ()=>{
-  document.getElementById('invitacion').hidden = false;
-  document.getElementById('splash').style.display = 'none';
+  $('#invitacion').hidden = false;
+  $('#splash').style.display = 'none';
+
+  // Reproducir música
+  const audio = $('#audio');
+  audio.play().catch(()=>{});
 });
 
+// ----------------------
+// BOTÓN MÚSICA
+// ----------------------
 const audio = $('#audio');
 const btnM = $('#btn-musica');
+
 btnM.addEventListener('click', function(){
   if(audio.paused){
-    audio.play().then(()=>{ this.textContent='⏸'; this.setAttribute('aria-pressed','true');}).catch(()=>{ alert('Agrega tu archivo en media/favorita.mp3');});
+    audio.play().then(()=>{
+      this.textContent='⏸';
+      this.setAttribute('aria-pressed','true');
+    });
   } else {
-    audio.pause(); this.textContent='▶'; this.setAttribute('aria-pressed','false');}
+    audio.pause();
+    this.textContent='▶';
+    this.setAttribute('aria-pressed','false');
+  }
 });
 
+// ----------------------
+// LINKS DINÁMICOS
+// ----------------------
 (function(){
   const msg = encodeURIComponent(CONFIG.mensajeRSVP);
-  const rsvp = document.getElementById('btn-rsvp');
+  const rsvp = $('#btn-rsvp');
   if(rsvp) rsvp.href = `https://wa.me/${CONFIG.telefonoRSVP}?text=${msg}`;
-  const mapa = document.getElementById('btn-ubicacion');
-  if(mapa) mapa.href = CONFIG.urlMapa || 'https://maps.app.goo.gl/BpvXv8BAkQ9WtZ5G7';
-})();
-(function(){
-  // 1. Tomar la fecha desde el HTML
-  const fechaTexto = document.querySelector(".fecha").textContent.trim();
 
-  // 2. Convertir "01 de agosto de 2026" a ISO
+  const mapa = $('#btn-ubicacion');
+  if(mapa) mapa.href = CONFIG.urlMapa;
+})();
+
+// ----------------------
+// CONTADOR
+// ----------------------
+(function(){
+  const fechaTexto = $(".fecha").textContent.trim();
+
   const meses = {
     "enero": "01","febrero": "02","marzo": "03","abril": "04",
     "mayo": "05","junio": "06","julio": "07","agosto": "08",
@@ -44,11 +68,9 @@ btnM.addEventListener('click', function(){
   const mes = meses[partes[1]];
   const año = partes[2];
 
-  // 3. Crear fecha ISO con hora fija (ajústala si quieres)
   const fechaISO = `${año}-${mes}-${dia}T18:00:00`;
-
-  // 4. Usar tu mismo código
   const t = new Date(fechaISO).getTime();
+
   const D=$('#D'), H=$('#H'), M=$('#M'), S=$('#S');
 
   function upd(){
