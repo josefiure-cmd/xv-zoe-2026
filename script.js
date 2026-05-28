@@ -6,10 +6,16 @@ const CONFIG = {
 };
 
 const $ = s => document.querySelector(s);
+$('#btn-abrir').on('click', function(){
 
-$('#btn-abrir').addEventListener('click', ()=>{
-  document.getElementById('invitacion').hidden = false;
-  document.getElementById('splash').style.display = 'none';
+  // Mostrar la invitación
+  document.getElementById("invitacion").hidden = false;
+
+  // Reproducir música
+  const audio = document.getElementById("musica");
+  audio.play().catch(err => console.log("Autoplay bloqueado:", err));
+
+  // Aquí siguen tus animaciones del sobre...
 });
 
 const audio = $('#audio');
