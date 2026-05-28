@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Mis XV – Zoe | Invitación</title>
   <meta name="theme-color" content="#4d0f1a"/>
+
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css"/>
 </head>
+
 <body>
+
   <!-- Portada -->
   <section id="splash" class="splash">
     <div class="top">
@@ -26,16 +31,19 @@
     <p class="playhint">Dale play a mi canción favorita</p>
   </section>
 
+  <!-- Audio -->
+  <audio id="audio" hidden>
+    <source src="media/favorita.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Botón música -->
+  <button id="btn-musica" class="btn-musica" aria-pressed="false">▶</button>
+
   <!-- Invitación -->
   <main id="invitacion" hidden>
+
     <header class="hero">
       <img src="images/foto_principal.jpg" alt="Foto principal" class="hero-photo"/>
-      <audio hidden id="musica">
-      <source src="media/favorita.mp3" type="audio/mpeg">
-    </audio>
-
-
-      
     </header>
 
     <section class="frase">
@@ -44,6 +52,7 @@
       </div>
     </section>
 
+    <!-- Contador -->
     <section class="contador" aria-live="polite">
       <h2 class="script">¡Tan solo faltan!</h2>
       <div class="reloj">
@@ -61,121 +70,48 @@
       <p class="leyenda">PARA ESTE DÍA TAN ESPECIAL</p>
     </section>
 
+    <!-- Datos -->
     <section class="datos">
-<h3 class="ribbon">Quinceañera</h3>
-<p class="ribbon nombre-completo">Zoe Alexa Pacheco Gonzalez</p>
-<h4 class="ribbon">Yo junto con</h4>
-<h3 class="ribbon">Mis Padres</h3>
-<p class="ribbon padres">José de Jesús Pacheco Villalpando<br/>y<br/>Lucy González Guevara</p>
-<h3 class="ribbon">Mis Padrinos</h3>
-<p class="ribbon padrinos">Mauro Salas Robledo<br/>y<br/>Carolina Pacheco Villalpando</p>
+      <h3 class="ribbon">Quinceañera</h3>
+      <p class="ribbon nombre-completo">Zoe Alexa Pacheco Gonzalez</p>
 
+      <h4 class="ribbon">Yo junto con</h4>
+      <h3 class="ribbon">Mis Padres</h3>
+      <p class="ribbon padres">José de Jesús Pacheco Villalpando<br/>y<br/>Lucy González Guevara</p>
 
+      <h3 class="ribbon">Mis Padrinos</h3>
+      <p class="ribbon padrinos">Mauro Salas Robledo<br/>y<br/>Carolina Pacheco Villalpando</p>
     </section>
 
-    <!-- 🔻 NUEVA SECCIÓN DE LA MISA -->
-<section class="misa" style="text-align:center;">
-  <h3 class="ribbon">Celebración de la Misa</h3>
+    <!-- Misa -->
+    <section class="misa" style="text-align:center;">
+      <h3 class="ribbon">Celebración de la Misa</h3>
 
-  
-  <!-- Ícono de iglesia -->
-<svg width="70" height="70" viewBox="0 0 24 24" fill="none" 
-     stroke="#b48a60" stroke-width="1.8" stroke-linecap="round" 
-     stroke-linejoin="round" style="margin:10px auto; display:block;">
-  <path d="M12 2 L12 7" />
-  <path d="M9 5 L15 5" />
-  <path d="M4 22 V12 L12 7 L20 12 V22 Z" />
-  <path d="M9 22 V16 A3 3 0 0 1 15 16 V22" />
-</svg>
-  
-  <p class="cuando">SÁBADO 01 DE AGOSTO DE 2026 · 6:00 P.M.</p>
-  <p class="donde">PARROQUIA NUESTRA SEÑORA DE GUADALUPE</p>
+      <svg width="70" height="70" viewBox="0 0 24 24" fill="none" 
+        stroke="#b48a60" stroke-width="1.8" stroke-linecap="round" 
+        stroke-linejoin="round" style="margin:10px auto; display:block;">
+        <path d="M12 2 L12 7" />
+        <path d="M9 5 L15 5" />
+        <path d="M4 22 V12 L12 7 L20 12 V22 Z" />
+        <path d="M9 22 V16 A3 3 0 0 1 15 16 V22" />
+      </svg>
 
-  <div class="acciones" style="justify-content:center;">
-    <a id="btn-misa" class="pill" target="_blank" rel="noopener"
-       href="https://www.google.com/maps/place/Parroquia+de+Nuestra+Se%C3%B1ora+de+Guadalupe./@32.5725432,-116.6273379,324m/data=!3m1!1e3!4m6!3m5!1s0x14fb30526d36ecc5:0xa7d743db5a3016f3!8m2!3d32.5720226!4d-116.6269225!16s%2Fg%2F11b75gpt8j">
-       VER UBICACIÓN
-    </a>
-  </div>
+      <p class="cuando">SÁBADO 01 DE AGOSTO DE 2026 · 6:00 P.M.</p>
+      <p class="donde">PARROQUIA NUESTRA SEÑORA DE GUADALUPE</p>
 
- </section>
-
-  </div>
-      <img src="images/foto_misa.jpg" alt="Foto de la parroquia" 
-     style="width:85%; max-width:400px; border-radius:12px; margin:15px auto; display:block;"/>
-
-</section>
-
-    <!-- 🔺 FIN DE LA SECCIÓN NUEVA -->
-    
-    <section class="recepcion">
-      <h3 class="ribbon">Recepción</h3>
-<svg width="70" height="70" viewBox="0 0 24 24" fill="none"
-     stroke="#e3b765" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
-
-  <!-- Plato (centro) -->
-  <circle cx="12" cy="12" r="6.2" />
-  <circle cx="12" cy="12" r="3.2" />
-
-  <!-- Tenedor (muy separado a la izquierda) -->
-  <path d="M2.8 3 V9" />
-  <path d="M2 3 V6" />
-  <path d="M3.6 3 V6" />
-  <path d="M2.8 9 V15" />
-
-  <!-- Cuchillo (muy separado a la derecha) -->
-  <path d="M21.2 3 V8" />
-  <path d="M21.2 8 C21.2 11 20.2 12 20.2 15" />
- </svg>
-<svg width="70" height="70" viewBox="0 0 24 24"
-     xmlns="http://www.w3.org/2000/svg">
-        <svg width="70" height="70" viewBox="0 0 24 24"
-       xmlns="http://www.w3.org/2000/svg">
-        <path fill="#e3b765" d="M16 3v11.1c-.6-.4-1.3-.6-2-.6-1.9 0-3.5 1.3-3.5 3s1.6 3 3.5 3 3.5-1.3 3.5-3V7h3V3h-4zm-8 4v7.1c-.6-.4-1.3-.6-2-.6-1.9 0-3.5 1.3-3.5 3s1.6 3 3.5 3 3.5-1.3 3.5-3V7H8z"/>
-        </svg>
-
-      
-      <p class="cuando">SÁBADO 01 DE AGOSTO DE 2026 · 7:00 P.M.</p>
-      <p class="donde">LOMAS DEL MIRADOR</p>
-      <div class="acciones">
-        <a id="btn-ubicacion" class="pill" target="_blank" rel="noopener" href="#">VER UBICACIÓN</a>
+      <div class="acciones" style="justify-content:center;">
+        <a id="btn-ubicacion" class="pill" target="_blank" rel="noopener">Ver ubicación</a>
       </div>
     </section>
 
-<section class="dresscode" style="text-align:center; margin-top:40px;">
-  <h3 class="ribbon">Código de Vestimenta</h3>
-
-  <!-- Icono de vestimenta (silueta dorada elegante) -->
-  <svg width="70" height="70" viewBox="0 0 24 24" fill="#e3b765"
-       style="margin:10px auto; display:block;">
-    <!-- Vestido -->
-    <path d="M8 2l2 4-2 3 2 11H6L4 9l2-3-2-4z"/>
-    <!-- Traje -->
-    <path d="M16 2l-2 4 2 3-2 11h4l2-11-2-3 2-4z"/>
-  </svg>
-
-  <p style="font-size:1.1rem; margin-top:10px;">
-    <strong>Negro Elegante</strong>
-  </p>
-  <p style="opacity:0.8;">
-    Vestimenta formal en tonos negros para una noche especial.
-  </p>
-</section>
-
-
-
-  
-    <section class="obsequio">
-      <h3 class="ribbon">Lluvia de Sobres</h3>
-      <img src="images/sobre_pequeno.png" alt="Sobre pequeño" class="sobre-mini"/>
+    <!-- RSVP -->
+    <section class="rsvp">
+      <a id="btn-rsvp" class="pill" target="_blank" rel="noopener">Confirmar asistencia</a>
     </section>
 
-    <section class="final">
-      <p class="script grande">¡Nos encantaría contar con su presencia!</p>
-      <a id="btn-rsvp" class="pill strong" target="_blank" rel="noopener" href="#">CONFIRMAR ASISTENCIA</a>
-    </section>
   </main>
 
   <script src="script.js"></script>
 </body>
 </html>
+
