@@ -41,7 +41,7 @@ html,body{margin:0;height:100%;font-family:Poppins,system-ui,Segoe UI,Roboto,Ari
 .ribbon {
   font-family:'Great Vibes',cursive;
   color:var(--burg);
-  font-size:20px;   /* tamaño uniforme */
+  font-size:30px;   /* tamaño uniforme */
   margin:8px 0 2px;
 }
 
