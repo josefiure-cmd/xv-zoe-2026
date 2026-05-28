@@ -1,7 +1,7 @@
 /* ------------------------------
    IMPORTACIÓN DE FUENTES
 ------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 /* ------------------------------
    RESET Y BASE
@@ -37,47 +37,41 @@ body {
 }
 
 .mis {
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  color: #b48a60;
+  font-family: 'Great Vibes', cursive;
+  font-size: 46px;
+  color: #c5a059;
   display: block;
-  margin-bottom: 5px;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
 }
 
 .xv {
   font-family: 'Playfair Display', serif;
-  font-size: 90px;
-  font-weight: 400;
-  font-style: italic;
+  font-size: 85px;
+  font-weight: 700;
   color: #4d0f1a;
+  letter-spacing: 4px;
   display: block;
-  line-height: 0.9;
+  line-height: 1;
 }
 
 .nombre {
-  font-family: 'Playfair Display', serif;
-  font-size: 50px;
-  font-weight: 600;
-  letter-spacing: 2px;
-  color: #4d0f1a;
+  font-family: 'Great Vibes', cursive;
+  font-size: 70px;
+  color: #b48a60;
   display: block;
-  margin-top: 15px;
+  margin-top: -5px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.08);
 }
 
 .fecha {
-  margin-top: 20px;
-  font-size: 16px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0.8;
+  margin-top: 10px;
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
 .carta-mini {
   width: 160px;
-  margin: 25px auto;
+  margin: 20px auto;
 }
 
 .btn-ghost {
@@ -201,12 +195,11 @@ body {
 }
 
 .ribbon {
-  font-family: 'Poppins', sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  margin: 25px 0 15px 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 26px;
+  font-style: italic;
+  letter-spacing: 1px;
+  margin: 15px 0;
   color: #b48a60;
 }
 
@@ -262,7 +255,7 @@ body {
   }
 
   .nombre {
-    font-size: 38px;
+    font-size: 48px;
   }
 
   .dig {
