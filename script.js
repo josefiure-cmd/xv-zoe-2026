@@ -30,7 +30,7 @@ btnM.addEventListener('click', function(){
 })();
 
 (function(){
-  const t = new Date(CONFIG.fechaEventoISO).getTime();
+  const t = new Date("2026-08-01T18:00:00").getTime();
   const D=$('#D'), H=$('#H'), M=$('#M'), S=$('#S');
   function upd(){
     let diff = Math.max(0, t - Date.now());
