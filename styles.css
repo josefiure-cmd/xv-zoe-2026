@@ -263,6 +263,14 @@ body {
   margin-right: auto;
 }
 
+/* Modificación de la foto de la misa (30% más chica) */
+.misa .mono {
+  width: 70%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+}
+
 .acciones {
   display: flex;
   justify-content: center;
