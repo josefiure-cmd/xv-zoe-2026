@@ -37,40 +37,49 @@ body {
 }
 
 .mis {
-  font-family: 'Great Vibes', cursive;
-  font-size: 60px; /* Tamaño aumentado */
-  color: #4d0f1a;
+  font-family: 'Playfair Display', serif;
+  font-size: 55px;
+  font-weight: 700;
+  color: #c5a059; /* Dorado medio elegante */
+  letter-spacing: 4px;
+  text-transform: uppercase;
   display: block;
   line-height: 1.2;
-  text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
 }
 
 .xv {
   font-family: 'Playfair Display', serif;
-  font-size: 130px; /* Tamaño extra grande para el impacto */
-  font-weight: 700;
-  color: #4d0f1a;
-  letter-spacing: 6px;
+  font-size: 140px; /* Grande e imponente como la imagen */
+  font-weight: 900;
+  color: #4d0f1a; /* El tono vino profundo de la cinta */
+  letter-spacing: 2px;
   display: block;
-  line-height: 0.8; /* Interlineado ajustado para que el nombre quede cerca */
-  margin: 10px 0;
+  line-height: 0.85;
+  margin: 5px 0;
 }
 
 .nombre {
   font-family: 'Great Vibes', cursive;
-  font-size: 100px; /* Nombre mucho más grande */
-  color: #d4af37; /* Dorado intenso */
+  font-size: 110px; /* Súper grande y fluida */
   display: block;
-  margin-top: -20px; /* Ajuste para que se vea entrelazado con el XV */
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+  margin-top: -15px;
+  
+  /* EFECTO DE ORO BRILLANTE EN DEGRADADO */
+  background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Sombra elegante que le da el relieve de impresión */
+  filter: drop-shadow(2px 3px 3px rgba(77, 15, 26, 0.15)); 
 }
 
 .fecha {
-  margin-top: 20px;
-  font-size: 20px;
-  letter-spacing: 2px;
-  font-weight: 400;
-  text-transform: uppercase;
+  margin-top: 25px;
+  font-size: 22px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #333;
 }
 
 .carta-mini {
@@ -79,20 +88,22 @@ body {
 }
 
 .btn-ghost {
-  padding: 14px 30px;
-  border: 2px solid #d4af37;
+  padding: 14px 35px;
+  border: 2px solid #b38728;
   background: transparent;
-  color: #d4af37;
-  font-size: 20px;
+  color: #b38728;
+  font-size: 18px;
   border-radius: 40px;
   cursor: pointer;
   transition: 0.3s;
   font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .btn-ghost:hover {
-  background: #d4af37;
+  background: linear-gradient(135deg, #bf953f, #aa771c);
   color: #fff;
+  border-color: transparent;
 }
 
 .playhint {
@@ -108,7 +119,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #d4af37;
+  background: linear-gradient(135deg, #bf953f, #aa771c);
   color: #fff;
   border: none;
   font-size: 22px;
@@ -116,7 +127,7 @@ body {
   height: 55px;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(170,119,28,0.4);
   z-index: 999;
 }
 
@@ -139,8 +150,8 @@ body {
   margin: 35px auto;
   padding: 25px;
   width: 85%;
-  border-left: 5px solid #d4af37;
-  border-right: 5px solid #d4af37;
+  border-left: 4px solid #bf953f;
+  border-right: 4px solid #bf953f;
   font-size: 20px;
   text-align: center;
   font-style: italic;
@@ -168,13 +179,14 @@ body {
   padding: 15px 0;
   background: #fff;
   border-radius: 12px;
-  border: 2px solid #d4af37;
+  border: 2px solid #bf953f;
+  color: #4d0f1a;
 }
 
 .sep {
   font-size: 45px;
   font-weight: bold;
-  color: #d4af37;
+  color: #bf953f;
 }
 
 .etq {
@@ -195,38 +207,55 @@ body {
 
 .ribbon {
   font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  font-style: italic;
-  letter-spacing: 1px;
-  margin: 20px 0;
-  color: #4d0f1a;
+  font-size: 36px;
   font-weight: 700;
+  margin: 25px 0;
+  color: #4d0f1a; /* Títulos de sección en vino como los subtítulos impresos */
 }
 
-.nombre-completo,
-.padres,
-.padrinos {
-  font-size: 20px;
+.nombre-completo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  color: #ba8b26;
   margin-bottom: 20px;
 }
 
+.padres,
+.padrinos {
+  font-size: 19px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
 /* ------------------------------
-   MISA
+   MISA / RECEPCIÓN
 ------------------------------ */
 .misa {
   margin: 50px 0;
 }
 
+.misa .cuando {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.misa .donde {
+  font-size: 17px;
+  margin-top: 5px;
+  opacity: 0.9;
+}
+
 .pill {
   display: inline-block;
-  padding: 14px 30px;
-  background: #d4af37;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #bf953f, #aa771c);
   color: #fff;
   border-radius: 35px;
   text-decoration: none;
   margin-top: 20px;
   font-size: 18px;
   font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* ------------------------------
@@ -234,14 +263,17 @@ body {
 ------------------------------ */
 @media (max-width: 480px) {
   .mis {
-    font-size: 50px;
+    font-size: 42px;
   }
   .xv {
-    font-size: 100px;
+    font-size: 110px;
   }
   .nombre {
-    font-size: 75px;
-    margin-top: -15px;
+    font-size: 85px;
+    margin-top: -10px;
+  }
+  .ribbon {
+    font-size: 28px;
   }
   .dig {
     width: 55px;
