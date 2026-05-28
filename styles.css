@@ -36,7 +36,7 @@ html,body{margin:0;height:100%;font-family:Poppins,system-ui,Segoe UI,Roboto,Ari
 .datos{padding:10px 16px;text-align:center}
 .ribbon{font-family:'Great Vibes',cursive;color:var(--burg);font-size:16px;margin:8px 0 2px}
 .nombre-completo{font-size:16px;letter-spacing:.5px}
-.padres{font-size:15px}
+.padres, .padrinos {font-size:16px; /* igual que ribbon y nombre-completo */}
 
 /* Recepción */
 .recepcion{padding:10px 16px 20px;text-align:center}
