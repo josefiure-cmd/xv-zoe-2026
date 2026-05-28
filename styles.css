@@ -38,8 +38,8 @@ body {
 
 .mis {
   font-family: 'Great Vibes', cursive;
-  font-size: 46px;
-  color: #c5a059;
+  font-size: 48px;
+  color: #4d0f1a; /* Cambiado a tu tono vino base para que tenga máximo contraste */
   display: block;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.05);
 }
@@ -48,7 +48,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 85px;
   font-weight: 700;
-  color: #4d0f1a;
+  color: #4d0f1a; /* Tono vino elegante y fuerte */
   letter-spacing: 4px;
   display: block;
   line-height: 1;
@@ -56,11 +56,11 @@ body {
 
 .nombre {
   font-family: 'Great Vibes', cursive;
-  font-size: 70px;
-  color: #b48a60;
+  font-size: 75px; /* Un poco más grande para resaltar */
+  color: #d4af37; /* ¡Dorado intenso / Oro brillante! */
   display: block;
   margin-top: -5px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.08);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.15); /* Sombra más marcada para que no sea opaca */
 }
 
 .fecha {
@@ -76,17 +76,18 @@ body {
 
 .btn-ghost {
   padding: 12px 25px;
-  border: 2px solid #b48a60;
+  border: 2px solid #d4af37; /* Borde dorado intenso */
   background: transparent;
-  color: #b48a60;
+  color: #d4af37; /* Texto dorado intenso */
   font-size: 18px;
   border-radius: 30px;
   cursor: pointer;
   transition: 0.3s;
+  font-weight: 500;
 }
 
 .btn-ghost:hover {
-  background: #b48a60;
+  background: #d4af37;
   color: #fff;
 }
 
@@ -103,7 +104,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #b48a60;
+  background: #d4af37; /* Botón dorado intenso */
   color: #fff;
   border: none;
   font-size: 22px;
@@ -134,8 +135,8 @@ body {
   margin: 25px auto;
   padding: 20px;
   width: 85%;
-  border-left: 4px solid #b48a60;
-  border-right: 4px solid #b48a60;
+  border-left: 4px solid #d4af37; /* Líneas doradas más vivas */
+  border-right: 4px solid #d4af37;
   font-size: 18px;
   text-align: center;
   font-style: italic;
@@ -163,13 +164,13 @@ body {
   padding: 10px 0;
   background: #fff;
   border-radius: 10px;
-  border: 2px solid #b48a60;
+  border: 2px solid #d4af37; /* Bordes del reloj más vivos */
 }
 
 .sep {
   font-size: 40px;
   font-weight: bold;
-  color: #b48a60;
+  color: #d4af37;
 }
 
 .etq {
@@ -200,7 +201,8 @@ body {
   font-style: italic;
   letter-spacing: 1px;
   margin: 15px 0;
-  color: #b48a60;
+  color: #4d0f1a; /* Títulos de secciones en vino para máxima legibilidad */
+  font-weight: 600;
 }
 
 .nombre-completo,
@@ -230,12 +232,14 @@ body {
 .pill {
   display: inline-block;
   padding: 12px 25px;
-  background: #b48a60;
+  background: #d4af37; /* Botones de pase/mapa en dorado encendido */
   color: #fff;
   border-radius: 30px;
   text-decoration: none;
   margin-top: 15px;
   font-size: 16px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 /* ------------------------------
@@ -255,7 +259,7 @@ body {
   }
 
   .nombre {
-    font-size: 48px;
+    font-size: 52px;
   }
 
   .dig {
