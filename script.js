@@ -6,20 +6,10 @@ const CONFIG = {
 };
 
 const $ = s => document.querySelector(s);
-$('#btn-abrir').on('click', function(){
 
-    // Mostrar la invitación
-    document.getElementById("invitacion").hidden = false;
-
-    // Reproducir música
-    const audio = document.getElementById("musica");
-    audio.play().catch(err => console.log("Autoplay bloqueado:", err));
-
-    // Aquí siguen tus animaciones del sobre...
-});
-
-
-  // Aquí siguen tus animaciones del sobre...
+$('#btn-abrir').addEventListener('click', ()=>{
+  document.getElementById('invitacion').hidden = false;
+  document.getElementById('splash').style.display = 'none';
 });
 
 const audio = $('#audio');
