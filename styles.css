@@ -33,7 +33,7 @@ html,body{margin:0;height:100%;font-family:Poppins,system-ui,Segoe UI,Roboto,Ari
 .leyenda{margin:10px 0 0;font-weight:700;letter-spacing:2px}
 
 /* Datos */
-.datos{padding:10px 16px;text-align:center}
+.datos{padding:16px 16px;text-align:center}
 .ribbon{font-family:'Great Vibes',cursive;color:var(--burg);font-size:16px;margin:8px 0 2px}
 .nombre-completo{font-size:15px;letter-spacing:.5px}
 .padres, .padrinos {font-size:15px; /* igual que ribbon y nombre-completo */}
