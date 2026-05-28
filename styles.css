@@ -25,10 +25,12 @@ body {
   flex-direction: column;
   justify-content: center;
   background: #fff;
+  transition: opacity 1s ease;
 }
 
-.splash .top {
-  margin-bottom: 20px;
+.splash.oculto {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .mis {
@@ -60,6 +62,14 @@ body {
 .carta-mini {
   width: 160px;
   margin: 20px auto;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.sobre-abierto .carta-mini {
+  opacity: 0;
+  transform: translateY(-80px) scale(0.8);
 }
 
 .btn-ghost {
@@ -107,7 +117,14 @@ body {
    INVITACIÓN
 ------------------------------ */
 #invitacion {
-  padding-bottom: 60px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+#invitacion.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .hero-photo {
@@ -152,6 +169,30 @@ body {
   background: #fff;
   border-radius: 10px;
   border: 2px solid #b48a60;
+  position: relative;
+  overflow: hidden;
+}
+
+.dig span {
+  display: block;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.dig.animar span {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.dig.animar::after {
+  content: attr(data-next);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 1;
+  transform: translateY(-100%);
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 .sep {
@@ -172,6 +213,36 @@ body {
   margin-top: 10px;
   font-size: 14px;
   opacity: 0.7;
+}
+
+/* ------------------------------
+   TYPEWRITER
+------------------------------ */
+.titulo-animado {
+  display: inline-block;
+  opacity: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #b48a60;
+  font-family: 'Great Vibes', cursive;
+  font-size: 38px;
+  animation: aparecer 0.5s ease forwards,
+             escribir 2.5s steps(30) 0.5s forwards,
+             cursor 0.7s step-end infinite;
+}
+
+@keyframes aparecer {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes escribir {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes cursor {
+  50% { border-color: transparent; }
 }
 
 /* ------------------------------
@@ -230,6 +301,27 @@ body {
   text-align: center;
   margin: 40px 0;
 }
+
+/* ------------------------------
+   ANIMACIÓN DE SECCIONES
+------------------------------ */
+.fade-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-delay-1 { transition-delay: 0.2s; }
+.fade-delay-2 { transition-delay: 0.4s; }
+.fade-delay-3 { transition-delay: 0.6s; }
+.fade-delay-4 { transition-delay: 0.8s; }
+.fade-delay-5 { transition-delay: 1s; }
+.fade-delay-6 { transition-delay: 1.2s; }
 
 /* ------------------------------
    RESPONSIVE
