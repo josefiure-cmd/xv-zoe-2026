@@ -1,7 +1,7 @@
 /* ------------------------------
    IMPORTACIÓN DE FUENTES
 ------------------------------ */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600&family=Great+Vibes&family=Playfair+Display:ital,wght=0,400..900;1,400..900&display=swap');
 
 /* ------------------------------
    RESET Y BASE
@@ -261,6 +261,28 @@ body {
   font-size: 18px;
   font-weight: 600;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ------------------------------
+   CORRECCIÓN DE CENTRADO GENERAL
+------------------------------ */
+.misa, .recepcion, .obsequio, .rsvp, #invitacion {
+  text-align: center;
+}
+
+.mono, .sobre-mini, .carta-mini {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin: 20px auto;
 }
 
 /* ------------------------------
