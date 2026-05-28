@@ -1,4 +1,9 @@
 /* ------------------------------
+   IMPORTACIÓN DE FUENTES
+------------------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* ------------------------------
    RESET Y BASE
 ------------------------------ */
 * {
@@ -32,34 +37,47 @@ body {
 }
 
 .mis {
-  font-family: 'Great Vibes', cursive;
-  font-size: 40px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #b48a60;
   display: block;
+  margin-bottom: 5px;
 }
 
 .xv {
   font-family: 'Playfair Display', serif;
-  font-size: 70px;
-  font-weight: 700;
+  font-size: 90px;
+  font-weight: 400;
+  font-style: italic;
+  color: #4d0f1a;
   display: block;
+  line-height: 0.9;
 }
 
 .nombre {
-  font-family: 'Great Vibes', cursive;
-  font-size: 55px;
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #4d0f1a;
   display: block;
-  margin-top: -10px;
+  margin-top: 15px;
 }
 
 .fecha {
-  margin-top: 10px;
-  font-size: 18px;
-  letter-spacing: 1px;
+  margin-top: 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 
 .carta-mini {
   width: 160px;
-  margin: 20px auto;
+  margin: 25px auto;
 }
 
 .btn-ghost {
@@ -183,9 +201,13 @@ body {
 }
 
 .ribbon {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  margin: 25px 0 15px 0;
+  color: #b48a60;
 }
 
 .nombre-completo,
@@ -235,6 +257,14 @@ body {
    RESPONSIVE
 ------------------------------ */
 @media (max-width: 480px) {
+  .xv {
+    font-size: 65px;
+  }
+
+  .nombre {
+    font-size: 38px;
+  }
+
   .dig {
     width: 50px;
     font-size: 32px;
@@ -254,4 +284,3 @@ body {
     font-size: 20px;
   }
 }
-
