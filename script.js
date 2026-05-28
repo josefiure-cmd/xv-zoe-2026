@@ -28,20 +28,42 @@ btnM.addEventListener('click', function(){
   const mapa = document.getElementById('btn-ubicacion');
   if(mapa) mapa.href = CONFIG.urlMapa || 'https://maps.app.goo.gl/BpvXv8BAkQ9WtZ5G7';
 })();
-
 (function(){
-  const t = new Date("2026-08-01T18:00:00").getTime();
+  // 1. Tomar la fecha desde el HTML
+  const fechaTexto = document.querySelector(".fecha").textContent.trim();
+
+  // 2. Convertir "01 de agosto de 2026" a ISO
+  const meses = {
+    "enero": "01","febrero": "02","marzo": "03","abril": "04",
+    "mayo": "05","junio": "06","julio": "07","agosto": "08",
+    "septiembre": "09","octubre": "10","noviembre": "11","diciembre": "12"
+  };
+
+  const partes = fechaTexto.split(" de ");
+  const dia = partes[0];
+  const mes = meses[partes[1]];
+  const año = partes[2];
+
+  // 3. Crear fecha ISO con hora fija (ajústala si quieres)
+  const fechaISO = `${año}-${mes}-${dia}T18:00:00`;
+
+  // 4. Usar tu mismo código
+  const t = new Date(fechaISO).getTime();
   const D=$('#D'), H=$('#H'), M=$('#M'), S=$('#S');
+
   function upd(){
     let diff = Math.max(0, t - Date.now());
     const d = Math.floor(diff/86400000); diff -= d*86400000;
     const h = Math.floor(diff/3600000); diff -= h*3600000;
     const m = Math.floor(diff/60000); diff -= m*60000;
     const s = Math.floor(diff/1000);
+
     D.textContent = String(d).padStart(2,'0');
     H.textContent = String(h).padStart(2,'0');
     M.textContent = String(m).padStart(2,'0');
     S.textContent = String(s).padStart(2,'0');
   }
-  upd(); setInterval(upd, 1000);
+
+  setInterval(upd, 1000);
+  upd();
 })();
