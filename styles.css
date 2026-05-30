@@ -145,7 +145,7 @@ body {
 }
 
 /* ------------------------------
-   FRASE
+   FRASE (DEDICATORIA)
 ------------------------------ */
 .frase .marco {
   margin: 35px auto;
@@ -153,9 +153,14 @@ body {
   width: 85%;
   border-left: 4px solid #bf953f;
   border-right: 4px solid #bf953f;
-  font-size: 20px;
-  text-align: center;
+  
+  /* CAMBIO: Fuente serif elegante con estilo itálico */
+  font-family: 'Playfair Display', serif;
   font-style: italic;
+  font-size: 22px;
+  line-height: 1.6;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 /* Ajuste específico para el nombre al final de la dedicatoria */
@@ -312,6 +317,9 @@ body {
   .nombre {
     font-size: 85px;
     margin-top: -10px;
+  }
+  .frase .marco {
+    font-size: 18px; /* Tamaño de frase ligeramente menor en móviles */
   }
   .frase .marco .nombre {
     font-size: 34px; /* Adaptación sutil para el nombre en la dedicatoria móvil */
