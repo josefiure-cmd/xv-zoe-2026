@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>XV Zoe Alexa</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoe Alexa - Mis XV</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -15,32 +15,25 @@
     </div>
     <h1 class="nombre">Zoe Alexa</h1>
     <p class="fecha">01 . 08 . 2026</p>
-    
-    <img src="images/carta_mini.png" alt="Invitación" class="carta-mini" />
-    
+    <img src="images/carta_mini.png" alt="Invitación" class="carta-mini">
     <button class="btn-ghost" onclick="comenzarInvitacion()">INGRESAR</button>
     <p class="playhint">Haz clic para descubrir la invitación y activar la música</p>
   </section>
 
   <audio id="musica-fondo" loop>
-    <source src="media/musica.mp3" type="audio/mpeg" />
-    Tu navegador no soporta el elemento de audio.
+    <source src="media/musica.mp3" type="audio/mpeg">
   </audio>
 
-  <button id="btn-musica" style="display: none;" onclick="alternarMusica()">
+  <button id="btn-musica" onclick="alternarMusica()" style="display: none;">
     <i id="icono-musica" class="fa-solid fa-music"></i>
   </button>
 
   <main id="invitacion" style="display: none;">
-    
-    <img src="images/hero_photo.jpg" alt="Zoe Alexa" class="hero-photo" />
+    <img src="images/hero_photo.jpg" alt="Zoe Alexa" class="hero-photo">
 
     <section class="frase">
       <div class="marco">
-        <p>
-          "Hoy empiezo un nuevo camino, un viaje lleno de sueños, ilusiones y esperanzas. 
-          Agradezco a Dios el don de la vida y a mi familia por caminar siempre a mi lado."
-        </p>
+        <p>"Hoy empiezo un nuevo camino, un viaje lleno de sueños, ilusiones y esperanzas. Agradezco a Dios el don de la vida y a mi familia por caminar siempre a mi lado."</p>
         <span class="nombre">Zoe Alexa</span>
       </div>
     </section>
@@ -73,12 +66,11 @@
     <section class="datos">
       <h3 class="ribbon">Mis Padres</h3>
       <span class="padres">Nombre del Padre<br>Nombre de la Madre</span>
-
       <h3 class="ribbon">Mis Padrinos</h3>
       <span class="padrinos">Nombre del Padrino<br>Nombre de la Madrina</span>
     </section>
 
-    <section class="misa" style="text-align:center;">
+    <section class="misa">
       <h3 class="ribbon">Celebración de la Misa</h3>
       <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#b48a60" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin:10px auto; display:block;">
         <path d="M12 2 L12 7" />
@@ -88,10 +80,9 @@
       </svg>
       <p class="cuando">SÁBADO 01 DE AGOSTO DE 2026 · 6:00 P.M.</p>
       <p class="donde">PARROQUIA NUESTRA SEÑORA DE GUADALUPE</p>
-      <img src="images/foto_misa.jpg" alt="Iglesia Misa" class="mono"/>
-      
+      <img src="images/foto_misa.jpg" alt="Iglecia Misa" class="mono">
       <div class="acciones" style="margin-top: 15px;">
-        <a id="btn-ubicacion-misa" class="pill" target="_blank" rel="noopener" href="https://maps.google.com/?cid=12094209933716756211&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNl">VER UBICACIÓN</a>
+        <a id="btn-ubicacion-misa" class="pill" target="_blank" rel="noopener" href="https://maps.app.goo.gl/6jprEs8yfYp8KF1bA">VER UBICACIÓN</a>
       </div>
     </section>
 
@@ -113,27 +104,21 @@
 
     <section class="obsequio">
       <h3 class="ribbon">Lluvia de Sobres</h3>
-      <img src="images/sobre_mini.png" alt="Sobre" class="sobre-mini" />
-      <p class="cuando" style="max-width: 80%; margin: 10px auto; font-size: 16px;">
-        El mejor regalo es tu presencia, pero si deseas tener un detalle conmigo, 
-        puedes colocarlo en un sobre en la entrada del salón.
-      </p>
+      <img src="images/sobre_mini.png" alt="Sobre" class="sobre-mini">
+      <p class="cuando" style="max-width: 80%; margin: 10px auto; font-size: 16px;">El mejor regalo es tu presencia, pero si deseas tener un detalle conmigo, puedes colocarlo en un sobre en la entrada del salón.</p>
     </section>
 
     <section class="rsvp">
       <h3 class="ribbon">Confirmar Asistencia</h3>
       <p class="cuando" style="margin-bottom: 20px;">Por favor, confirma tu asistencia antes del 15 de Julio</p>
       <div class="acciones">
-        <a class="pill" target="_blank" href="https://wa.me/1234567890?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Zoe%20Alexa">
-          CONFIRMAR POR WHATSAPP
-        </a>
+        <a class="pill" target="_blank" href="https://wa.me/1234567890?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Zoe%20Alexa">CONFIRMAR POR WHATSAPP</a>
       </div>
     </section>
 
-    <footer style="margin-top: 60px;">
+    <footer>
       <p class="texto-final">¡Te espero!</p>
     </footer>
-
   </main>
 
   <script src="https://kit.fontawesome.com/cb04990666.js" crossorigin="anonymous"></script>
