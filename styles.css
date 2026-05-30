@@ -158,6 +158,13 @@ body {
   font-style: italic;
 }
 
+/* Ajuste específico para el nombre al final de la dedicatoria */
+.frase .marco .nombre {
+  font-size: 48px;
+  margin-top: 15px;
+  display: block;
+}
+
 /* ------------------------------
    CONTADOR
 ------------------------------ */
@@ -305,6 +312,9 @@ body {
   .nombre {
     font-size: 85px;
     margin-top: -10px;
+  }
+  .frase .marco .nombre {
+    font-size: 34px; /* Adaptación sutil para el nombre en la dedicatoria móvil */
   }
   .ribbon {
     font-size: 38px;
