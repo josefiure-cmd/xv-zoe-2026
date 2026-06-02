@@ -395,8 +395,13 @@ body {
 ------------------------------ */
 @media (max-width: 480px) {
   .splash {
-    /* En pantallas muy chicas reducimos un poco más las rosas para que no se encima con las letras */
-    background-size: 120px auto, 120px auto;
+    /* Reducimos el tamaño de las rosas a 80px (muy discretas) */
+    background-size: 80px auto, 80px auto;
+    
+    /* El truco mágico: mezclamos el fondo con el color blanco 
+       para que las rosas se vuelvan tenues y no compitan con el texto */
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.85); 
   }
   .music-toggle-btn.circular-btn {
     width: 55px;   
