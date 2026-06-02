@@ -116,7 +116,7 @@ body {
   background-position: top left, bottom right;
   background-repeat: no-repeat, no-repeat;
   /* Controla que se vean más chicas y finas */
-  background-size: 1000px auto, 1000px auto;
+  background-size: 800px auto, 800px auto;
 }
 
 .splash .top {
