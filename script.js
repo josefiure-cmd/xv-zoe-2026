@@ -15,28 +15,41 @@ $('#btn-abrir').addEventListener('click', ()=>{
   $('#invitacion').style.display = 'block';
   $('#splash').style.display = 'none';
 
-  // Reproducir música
+  // Reproducir música automáticamente al entrar y activar el botón dorado
   const audio = $('#audio');
-  audio.play().catch(()=>{});
+  audio.play().then(() => {
+    // Si arranca con éxito, mostramos el ícono de pausa en el botón dorado
+    const playIcon = $('.icon-play');
+    const pauseIcon = $('.icon-pause');
+    if (playIcon && pauseIcon) {
+      playIcon.style.display = 'none';
+      pauseIcon.style.display = 'inline';
+    }
+  }).catch(()=>{});
 });
 
 // ----------------------
-// BOTÓN MÚSICA
+// CONTROL DEL BOTÓN DORADO DE MÚSICA (ACTUALIZADO)
 // ----------------------
 const audio = $('#audio');
-const btnM = $('#btn-musica');
+const btnMusicToggle = $('#music-toggle'); // Vinculado a tu nuevo botón dorado
 
-if (btnM) {
-  btnM.addEventListener('click', function(){
-    if(audio.paused){
-      audio.play().then(()=>{
-        this.textContent='⏸';
-        this.setAttribute('aria-pressed','true');
+if (btnMusicToggle) {
+  btnMusicToggle.addEventListener('click', () => {
+    const playIcon = $('.icon-play');
+    const pauseIcon = $('.icon-pause');
+
+    if (audio.paused) {
+      audio.play().then(() => {
+        // Muestra pausa ⏸ y oculta play ▶
+        if (playIcon) playIcon.style.display = 'none';
+        if (pauseIcon) pauseIcon.style.display = 'inline';
       });
     } else {
       audio.pause();
-      this.textContent='▶';
-      this.setAttribute('aria-pressed','false');
+      // Muestra play ▶ y oculta pausa ⏸
+      if (playIcon) playIcon.style.display = 'inline';
+      if (pauseIcon) pauseIcon.style.display = 'none';
     }
   });
 }
