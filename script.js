@@ -12,7 +12,7 @@ const $ = s => document.querySelector(s);
 // ABRIR INVITACIÓN
 // ----------------------
 $('#btn-abrir').addEventListener('click', ()=>{
-  $('#invitacion').hidden = false;
+  $('#invitacion').style.display = 'block';
   $('#splash').style.display = 'none';
 
   // Reproducir música
@@ -26,18 +26,20 @@ $('#btn-abrir').addEventListener('click', ()=>{
 const audio = $('#audio');
 const btnM = $('#btn-musica');
 
-btnM.addEventListener('click', function(){
-  if(audio.paused){
-    audio.play().then(()=>{
-      this.textContent='⏸';
-      this.setAttribute('aria-pressed','true');
-    });
-  } else {
-    audio.pause();
-    this.textContent='▶';
-    this.setAttribute('aria-pressed','false');
-  }
-});
+if (btnM) {
+  btnM.addEventListener('click', function(){
+    if(audio.paused){
+      audio.play().then(()=>{
+        this.textContent='⏸';
+        this.setAttribute('aria-pressed','true');
+      });
+    } else {
+      audio.pause();
+      this.textContent='▶';
+      this.setAttribute('aria-pressed','false');
+    }
+  });
+}
 
 // ----------------------
 // LINKS DINÁMICOS
@@ -52,7 +54,7 @@ btnM.addEventListener('click', function(){
 })();
 
 // ----------------------
-// CONTADOR
+// CONTADOR (CORREGIDO)
 // ----------------------
 (function(){
   const fechaTexto = $(".fecha").textContent.trim();
@@ -65,10 +67,10 @@ btnM.addEventListener('click', function(){
 
   const partes = fechaTexto.split(" de ");
   const dia = partes[0];
-  const mes = meses[partes[1]];
+  const mes = meses[partes[1].toLowerCase()]; // Asegura minúsculas
   const año = partes[2];
 
-  const fechaISO = `${año}-${mes}-${dia}T18:00:00`;
+  const fechaISO = `${año}-${mes}-${dia.padStart(2,'0')}T18:00:00`;
   const t = new Date(fechaISO).getTime();
 
   const D=$('#D'), H=$('#H'), M=$('#M'), S=$('#S');
@@ -80,10 +82,11 @@ btnM.addEventListener('click', function(){
     const m = Math.floor(diff/60000); diff -= m*60000;
     const s = Math.floor(diff/1000);
 
-    D.textContent = String(d).padStart(2,'0');
-    H.textContent = String(h).padStart(2,'0');
-    M.textContent = String(m).padStart(2,'0');
-    S.textContent = String(s).padStart(2,'0');
+    // Corregido: Ahora usa las constantes D, H, M, S declaradas arriba
+    if(D) D.textContent = String(d).padStart(2,'0');
+    if(H) H.textContent = String(h).padStart(2,'0');
+    if(M) M.textContent = String(m).padStart(2,'0');
+    if(S) S.textContent = String(s).padStart(2,'0');
   }
 
   setInterval(upd, 1000);
