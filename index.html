@@ -18,18 +18,18 @@
       <span class="mis">Mis</span>
       <span class="xv">XV</span>
       <h1 class="nombre">Zoe Alexa</h1>
-    <p class="fecha">01 de agosto de 2026</p>
+      <p class="fecha">01 de agosto de 2026</p>
      </div>
     <img src="images/sobre_pequeno.png" alt="Invitación" class="carta-mini">
     <button class="btn-ghost" id="btn-abrir">INGRESAR</button>
     <p class="playhint">Haz clic para descubrir la invitación y activar la música</p>
   </section>
 
-  <audio id="musica-fondo" loop>
+  <audio id="audio" loop>
     <source src="media/musica.mp3" type="audio/mpeg">
   </audio>
 
-  <button id="btn-musica" onclick="alternarMusica()" style="display: none;">
+  <button id="btn-musica" style="display: none;">
     <i id="icono-musica" class="fa-solid fa-music"></i>
   </button>
 
@@ -47,22 +47,22 @@
       <h3 class="ribbon">Faltan Solo</h3>
       <div class="reloj">
         <div>
-          <div id="dias" class="dig">00</div>
+          <div id="D" class="dig">00</div>
           <div class="etq">Días</div>
         </div>
         <div class="sep">:</div>
         <div>
-          <div id="horas" class="dig">00</div>
+          <div id="H" class="dig">00</div>
           <div class="etq">Horas</div>
         </div>
         <div class="sep">:</div>
         <div>
-          <div id="minutos" class="dig">00</div>
+          <div id="M" class="dig">00</div>
           <div class="etq">Min</div>
         </div>
         <div class="sep">:</div>
         <div>
-          <div id="segundos" class="dig">00</div>
+          <div id="S" class="dig">00</div>
           <div class="etq">Seg</div>
         </div>
       </div>
@@ -87,7 +87,7 @@
       <p class="donde">PARROQUIA NUESTRA SEÑORA DE GUADALUPE</p>
       <img src="images/foto_misa.jpg" alt="Iglesia Misa" class="mono">
       <div class="acciones" style="margin-top: 15px;">
-        <a id="btn-ubicacion-misa" class="pill" target="_blank" rel="noopener" href="http://googleusercontent.com/maps.google.com/54">VER UBICACIÓN</a>
+        <a id="btn-ubicacion" class="pill" target="_blank" rel="noopener" href="#">VER UBICACIÓN</a>
       </div>
     </section>
 
@@ -117,7 +117,7 @@
       <h3 class="ribbon">Confirmar Asistencia</h3>
       <p class="cuando" style="margin-bottom: 20px;">Por favor, confirma tu asistencia antes del 15 de Julio</p>
       <div class="acciones">
-        <a class="pill" target="_blank" href="https://wa.me/1234567890?text=Hola,%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Zoe%20Alexa">CONFIRMAR POR WHATSAPP</a>
+        <a id="btn-rsvp" class="pill" target="_blank" href="#">CONFIRMAR POR WHATSAPP</a>
       </div>
     </section>
 
