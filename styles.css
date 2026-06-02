@@ -18,27 +18,47 @@ body {
   color: #4d0f1a;
   overflow-x: hidden;
 }
-/* Contenedor principal */
-.music-control-container {
-  text-align: center;
-  background: radial-gradient(circle, #5a1220 0%, #3d0a14 100%); /* Fondo borgoña oscuro texturizado */
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  max-width: 300px;
-  margin: 20px auto;
-  font-family: 'Poppins', sans-serif; /* O la fuente que ya uses */
+
+/* ------------------------------
+   CONTENEDOR DE LA FOTO Y BOTÓN SUPERPUESTO
+------------------------------ */
+.photo-overlay-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: block;
 }
 
-/* El botón circular dorado */
-.music-toggle-btn {
-  background: linear-gradient(145deg, #f5e0a3, #b48a60); /* Degradado dorado metálco */
+.hero-photo {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Contenedor del botón ajustado para flotar encima de la foto */
+.music-control-container.overlay-button {
+  position: absolute;
+  top: 15px;      /* Distancia desde el borde superior de la foto */
+  left: 15px;     /* Distancia desde el borde izquierdo de la foto */
+  z-index: 10;    /* Forzar a que flote sobre la imagen */
+  background: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  max-width: none;
+  text-align: left;
+}
+
+/* Rediseño circular y compacto del botón dorado */
+.music-toggle-btn.circular-btn {
+  background: linear-gradient(145deg, #f5e0a3, #b48a60); /* Degradado dorado metálico */
   border: none;
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 65px;    /* Tamaño pequeño y elegante para integrarse al lado */
+  height: 65px;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3), inset 0 -2px 5px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35), inset 0 -1px 3px rgba(0,0,0,0.2);
   transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -46,62 +66,37 @@ body {
   justify-content: center;
   position: relative;
   overflow: hidden;
+  padding: 0;
 }
 
-.music-toggle-btn:hover {
+.music-toggle-btn.circular-btn:hover {
   transform: scale(1.05);
-  box-shadow: 0 8px 20px rgba(245, 224, 163, 0.4);
+  box-shadow: 0 6px 15px rgba(245, 224, 163, 0.4);
 }
 
-.music-toggle-btn:active {
-  transform: scale(0.98);
+.music-toggle-btn.circular-btn:active {
+  transform: scale(0.97);
 }
 
-/* Iconos y texto dentro del botón */
-.music-toggle-btn span {
+/* Iconos y texto adaptados al formato mini */
+.music-toggle-btn.circular-btn span {
   color: #3d0a14; /* Texto borgoña oscuro sobre oro */
   display: block;
+  line-height: 1;
 }
 
-.icon-play, .icon-pause {
-  font-size: 32px;
-  margin-bottom: 5px;
+.music-toggle-btn.circular-btn .icon-play, 
+.music-toggle-btn.circular-btn .icon-pause {
+  font-size: 16px;
+  margin-bottom: 2px;
 }
 
-.btn-text {
-  font-size: 14px;
+.music-toggle-btn.circular-btn .btn-text {
+  font-size: 8px;
   font-weight: 700;
-  letter-spacing: 2px;
-}
-
-/* Indicadores de punto (los puntitos brillantes alrededor) */
-.status-indicators {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background-color: rgba(245, 224, 163, 0.3);
-  border-radius: 50%;
-}
-
-.dot.active {
-  background-color: #f5e0a3;
-  box-shadow: 0 0 10px #f5e0a3;
-}
-
-/* Etiqueta inferior */
-.control-label {
-  margin-top: 15px;
-  color: #f5e0a3;
-  font-size: 12px;
   letter-spacing: 1px;
-  text-transform: uppercase;
 }
+
 /* ------------------------------
    PORTADA (SPLASH)
 ------------------------------ */
@@ -196,7 +191,7 @@ body {
 }
 
 /* ------------------------------
-   BOTÓN DE MÚSICA
+   BOTÓN DE MÚSICA RESPALDO
 ------------------------------ */
 #btn-musica {
   position: fixed;
@@ -220,11 +215,6 @@ body {
 #invitacion {
   padding-bottom: 60px;
   text-align: center;
-}
-
-.hero-photo {
-  width: 100%;
-  display: block;
 }
 
 /* ------------------------------
@@ -391,6 +381,17 @@ body {
    RESPONSIVE (AL FINAL PARA QUE SEA EFECTIVO)
 ------------------------------ */
 @media (max-width: 480px) {
+  .music-toggle-btn.circular-btn {
+    width: 55px;   /* Un toque un poco más pequeño para conservar espacio en pantallas compactas */
+    height: 55px;
+  }
+  .music-toggle-btn.circular-btn .icon-play, 
+  .music-toggle-btn.circular-btn .icon-pause {
+    font-size: 14px;
+  }
+  .music-toggle-btn.circular-btn .btn-text {
+    font-size: 7px;
+  }
   .mis {
     font-size: 42px;
   }
