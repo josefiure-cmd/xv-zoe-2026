@@ -393,7 +393,7 @@ body {
 /* ------------------------------
    RESPONSIVE (AL FINAL PARA QUE SEA EFECTIVO)
 ------------------------------ */
-@media (max-width: 240px) {
+@media (max-width: 120px) {
   .splash {
     /* Reducimos el tamaño de las rosas a 80px (muy discretas) */
     background-size: 80px auto, 80px auto;
