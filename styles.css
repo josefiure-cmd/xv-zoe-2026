@@ -98,7 +98,7 @@ body {
 }
 
 /* ------------------------------
-   PORTADA (SPLASH)
+   PORTADA (SPLASH) - CON ROSAS PEQUEÑAS EN 2 ESQUINAS
 ------------------------------ */
 .splash {
   text-align: center;
@@ -107,11 +107,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #fff;
+  position: relative;
+  background-color: #fff;
+
+  /* Carga las imágenes de rosas individuales para cada esquina */
+  background-image: url('images/rosas-arriba.png'), url('images/rosas-abajo.png');
+  /* Las fija en la esquina superior izquierda y esquina inferior derecha */
+  background-position: top left, bottom right;
+  background-repeat: no-repeat, no-repeat;
+  /* Controla que se vean más chicas y finas */
+  background-size: 160px auto, 160px auto;
 }
 
 .splash .top {
   margin-bottom: 10px;
+  z-index: 2; /* Asegura que el texto quede por encima de los fondos si se cruzan */
 }
 
 .mis {
@@ -163,6 +173,7 @@ body {
 .carta-mini {
   width: 180px;
   margin: 30px auto;
+  z-index: 2;
 }
 
 .btn-ghost {
@@ -176,6 +187,7 @@ body {
   transition: 0.3s;
   font-weight: 600;
   letter-spacing: 1px;
+  z-index: 2;
 }
 
 .btn-ghost:hover {
@@ -188,6 +200,7 @@ body {
   margin-top: 15px;
   font-size: 14px;
   opacity: 0.7;
+  z-index: 2;
 }
 
 /* ------------------------------
@@ -381,8 +394,12 @@ body {
    RESPONSIVE (AL FINAL PARA QUE SEA EFECTIVO)
 ------------------------------ */
 @media (max-width: 480px) {
+  .splash {
+    /* En pantallas muy chicas reducimos un poco más las rosas para que no se encima con las letras */
+    background-size: 120px auto, 120px auto;
+  }
   .music-toggle-btn.circular-btn {
-    width: 55px;   /* Un toque un poco más pequeño para conservar espacio en pantallas compactas */
+    width: 55px;   
     height: 55px;
   }
   .music-toggle-btn.circular-btn .icon-play, 
@@ -403,10 +420,10 @@ body {
     margin-top: -10px;
   }
   .frase .marco {
-    font-size: 18px; /* Tamaño de frase ligeramente menor en móviles */
+    font-size: 18px; 
   }
   .frase .marco .nombre {
-    font-size: 34px; /* Adaptación sutil para el nombre en la dedicatoria móvil */
+    font-size: 34px; 
   }
   .ribbon {
     font-size: 38px;
