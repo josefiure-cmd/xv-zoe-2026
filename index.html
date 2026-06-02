@@ -105,13 +105,36 @@
 
     <section class="recepcion">
       <h3 class="ribbon">Recepción</h3>
-      <svg width="70" height="70" viewBox="0 0 24 24" fill="none" stroke="#b48a60" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="margin:10px auto; display:block;">
-        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18" />
-        <path d="M2 22h20" />
-        <path d="M12 6v4" />
-        <path d="M10 8h4" />
-        <path d="M10 14h4" />
-      </svg>
+     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120">
+  <!-- Fondo -->
+  <rect width="200" height="120" fill="white"/>
+
+  <!-- Platillo -->
+  <circle cx="80" cy="60" r="40" fill="none" stroke="#333" stroke-width="4"/>
+  <circle cx="80" cy="60" r="28" fill="none" stroke="#333" stroke-width="2"/>
+
+  <!-- Tenedor (lado derecho) -->
+  <g transform="translate(130,30)">
+    <!-- Mango -->
+    <rect x="6" y="20" width="6" height="50" rx="3" fill="#333"/>
+    <!-- Cabeza -->
+    <rect x="4" y="12" width="10" height="10" rx="3" fill="#333"/>
+    <!-- Dientes -->
+    <rect x="4" y="6" width="2" height="8" fill="#333"/>
+    <rect x="7" y="6" width="2" height="8" fill="#333"/>
+    <rect x="10" y="6" width="2" height="8" fill="#333"/>
+    <rect x="13" y="6" width="2" height="8" fill="#333"/>
+  </g>
+
+  <!-- Cuchara (lado derecho) -->
+  <g transform="translate(150,30)">
+    <!-- Mango -->
+    <rect x="6" y="20" width="6" height="50" rx="3" fill="#333"/>
+    <!-- Cabeza redonda -->
+    <ellipse cx="9" cy="14" rx="8" ry="10" fill="#333"/>
+  </g>
+</svg>
+
       <p class="cuando">SÁBADO 01 DE AGOSTO DE 2026 · 8:00 P.M.</p>
       <p class="donde">Fracc. Lomas del Mirador"</p>
       <div class="acciones">
