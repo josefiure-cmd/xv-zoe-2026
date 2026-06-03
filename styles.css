@@ -208,7 +208,14 @@ body {
   opacity: 0.7;
   z-index: 2;
 }
-
+/* Control de la imagen debajo de Obsequio */
+.img-obsequio {
+  display: block;       /* Permite centrarla */
+  margin: 15px auto;   /* La separa del texto y la centra */
+  width: 120px;        /* <--- CAMBIA ESTE NÚMERO para el tamaño (ej: 100px, 150px) */
+  height: auto;        /* Mantiene la proporción */
+  filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1)); /* Sombra suave para que resalte */
+}
 /* ------------------------------
    BOTÓN DE MÚSICA RESPALDO
 ------------------------------ */
