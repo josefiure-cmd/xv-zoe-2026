@@ -15,10 +15,15 @@ $('#btn-abrir').addEventListener('click', ()=>{
   $('#invitacion').style.display = 'block';
   $('#splash').style.display = 'none';
 
-  // Reproducir música automáticamente al entrar y activar el botón dorado
+  // Revelar el botón de música flotante con flex para que se centre perfectamente el ícono
+  const btnMusicToggle = $('#btn-musica');
+  if (btnMusicToggle) {
+    btnMusicToggle.style.display = 'flex';
+  }
+
+  // Reproducir música automáticamente al entrar
   const audio = $('#audio');
   audio.play().then(() => {
-    // Si arranca con éxito, mostramos el ícono de pausa en el botón dorado
     const playIcon = $('.icon-play');
     const pauseIcon = $('.icon-pause');
     if (playIcon && pauseIcon) {
@@ -29,10 +34,10 @@ $('#btn-abrir').addEventListener('click', ()=>{
 });
 
 // ----------------------
-// CONTROL DEL BOTÓN DORADO DE MÚSICA (ACTUALIZADO)
+// CONTROL DEL BOTÓN DE MÚSICA UNIFICADO (CORREGIDO ID)
 // ----------------------
 const audio = $('#audio');
-const btnMusicToggle = $('#music-toggle'); // Vinculado a tu nuevo botón dorado
+const btnMusicToggle = $('#btn-musica'); // <- Vinculado con éxito a tu botón redondo
 
 if (btnMusicToggle) {
   btnMusicToggle.addEventListener('click', () => {
@@ -67,7 +72,7 @@ if (btnMusicToggle) {
 })();
 
 // ----------------------
-// CONTADOR (CORREGIDO)
+// CONTADOR
 // ----------------------
 (function(){
   const fechaTexto = $(".fecha").textContent.trim();
@@ -80,7 +85,7 @@ if (btnMusicToggle) {
 
   const partes = fechaTexto.split(" de ");
   const dia = partes[0];
-  const mes = meses[partes[1].toLowerCase()]; // Asegura minúsculas
+  const mes = meses[partes[1].toLowerCase()];
   const año = partes[2];
 
   const fechaISO = `${año}-${mes}-${dia.padStart(2,'0')}T18:00:00`;
@@ -95,7 +100,6 @@ if (btnMusicToggle) {
     const m = Math.floor(diff/60000); diff -= m*60000;
     const s = Math.floor(diff/1000);
 
-    // Corregido: Ahora usa las constantes D, H, M, S declaradas arriba
     if(D) D.textContent = String(d).padStart(2,'0');
     if(H) H.textContent = String(h).padStart(2,'0');
     if(M) M.textContent = String(m).padStart(2,'0');
