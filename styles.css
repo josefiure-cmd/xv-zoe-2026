@@ -14,7 +14,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #f1e9e1;
+  background: #ebdcd0;
   color: #4d0f1a;
   overflow-x: hidden;
 }
@@ -108,7 +108,7 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background-color: #f1e9e1; /* Mantiene el fondo blanco limpio sin imágenes */
+  background-color: #ebdcd0; /* Mantiene el fondo blanco limpio sin imágenes */
 }
 
 .splash .top {
