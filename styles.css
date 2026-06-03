@@ -97,6 +97,16 @@ body {
   letter-spacing: 1px;
 }
 
+/* Estilos para la imagen de las copas */
+.copas-clink {
+  display: block;      /* Para centrar la imagen */
+  margin: 20px auto;  /* Espaciado superior e inferior, centrado horizontal */
+  width: 150px;       /* --- AJUSTA ESTE VALOR PARA CAMBIAR EL TAMANO --- */
+  height: auto;       /* Mantiene la proporción de la imagen */
+  max-width: 100%;    /* Evita que se desborde en pantallas pequeñas */
+}
+
+
 /* ------------------------------
    PORTADA (SPLASH) - CON ROSAS PEQUEÑAS EN 2 ESQUINAS
 ------------------------------ */
