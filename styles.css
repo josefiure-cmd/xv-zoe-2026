@@ -247,7 +247,13 @@ body {
   margin-top: 15px;
   display: block;
 }
-
+/* Controla el tamaño de la imagen de rosas dentro de la frase */
+.frase .mono {
+  width: 40%;        /* Reduce o aumenta este porcentaje según tu gusto */
+  max-width: 200px;  /* Le pone un límite máximo para que no se vea gigante en PC */
+  height: auto;      /* Mantiene la proporción para que no se deforme */
+  margin-top: 15px;  /* Le da un espacio de separación con el nombre */
+}
 /* ------------------------------
    CONTADOR
 ------------------------------ */
