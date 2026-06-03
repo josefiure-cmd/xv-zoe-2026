@@ -96,7 +96,12 @@ body {
   font-weight: 700;
   letter-spacing: 1px;
 }
-
+.clinking-flutes {
+    display: block;
+    margin: 20px auto; /* Centra la imagen */
+    width: 150px; /* Ajusta el tamaño aquí */
+    height: auto;
+}
 /* Estilos para la imagen de las copas */
 .copas-clink {
   display: block;      /* Para centrar la imagen */
