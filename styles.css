@@ -510,4 +510,10 @@ body {
   .sep {
     font-size: 36px;
   }
+   /* Ajustar el tamaño de las imágenes dentro del botón flotante */
+#btn-musica img {
+  width: 24px;   /* <--- Cambia este número para hacer el play/pause más grande o chico */
+  height: auto;
+  display: block;
+}
 }
