@@ -513,7 +513,7 @@ body {
   }
    /* Ajustar el tamaño de las imágenes dentro del botón flotante */
 #btn-musica img {
-  width: 24px;   /* <--- Cambia este número para hacer el play/pause más grande o chico */
+  width: 36px;   /* <--- Cambia este número para hacer el play/pause más grande o chico */
   height: auto;
   display: block;
 }
