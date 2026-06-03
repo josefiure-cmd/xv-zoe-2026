@@ -239,7 +239,23 @@ body {
   letter-spacing: 0.5px;
   text-align: center;
 }
+/* Estilos para la sección de código de vestimenta */
+.dress-code-content {
+  text-align: center;
+  padding: 10px 20px 20px;
+}
 
+.dress-code-text {
+  font-family: 'Poppins', sans-serif; /* O la fuente que uses para párrafos */
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.reserved-red {
+  color: #c5a059; /* El dorado de tu invitación, para contraste */
+  font-weight: bold;
+}
 /* Ajuste específico para el nombre al final de la dedicatoria */
 .frase .marco .nombre {
   font-size: 48px;
