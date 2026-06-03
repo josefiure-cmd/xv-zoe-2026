@@ -216,23 +216,54 @@ body {
   height: auto;        /* Mantiene la proporción */
   filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1)); /* Sombra suave para que resalte */
 }
+
 /* ------------------------------
-   BOTÓN DE MÚSICA RESPALDO
+   BOTÓN DE MÚSICA FLOTANTE Y REDONDO
 ------------------------------ */
 #btn-musica {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: linear-gradient(135deg, #bf953f, #aa771c);
-  color: #fff;
-  border: none;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Lo hace perfectamente redondo */
+  background: linear-gradient(145deg, #f5e0a3, #b48a60); /* Degradado dorado premium */
+  border: 2px solid #3a0710; /* Fino borde guinda para combinar */
+  color: #3a0710; /* Icono en color vino oscuro */
   font-size: 22px;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(170, 119, 28, 0.4);
-  z-index: 999;
+  z-index: 9999; /* Asegura que siempre flote por encima de todo el contenido */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  /* Animación suave de pulsación */
+  animation: pulseMusica 2s infinite;
+}
+
+/* Efectos al pasar el cursor */
+#btn-musica:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(180, 138, 96, 0.5);
+}
+
+#btn-musica:active {
+  transform: scale(0.95);
+}
+
+/* Definición de la animación de pulso */
+@keyframes pulseMusica {
+  0% {
+    box-shadow: 0 0 0 0 rgba(180, 138, 96, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(180, 138, 96, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(180, 138, 96, 0);
+  }
 }
 
 /* ------------------------------
