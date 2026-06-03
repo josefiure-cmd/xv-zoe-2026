@@ -14,8 +14,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: #3a0710;
-  color: #fff;
+  background: #ebdcd0;
+  color: #4d0f1a;
   overflow-x: hidden;
 }
 
@@ -108,7 +108,7 @@ body {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  background-color: #3a0710; /* Mantiene el fondo blanco limpio sin imágenes */
+  background-color: #ebdcd0; /* Mantiene el fondo blanco limpio sin imágenes */
 }
 
 .splash .top {
@@ -131,7 +131,7 @@ body {
   font-family: 'Great Vibes', cursive;
   font-size: 140px;
   font-weight: 900;
-  color: #fcf6ba; /* <- Cambiado a un dorado claro brillante */
+  color: #4d0f1a; /* <- Cambiado a un dorado claro brillante */
   letter-spacing: 2px;
   display: block;
   line-height: 0.85;
@@ -148,9 +148,7 @@ body {
   background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1.5px #000000; 
-  filter: drop-shadow(2px 3px 3px rgba(0, 0, 0, 0.4));
-  /* Sombra elegante que le da el relieve de impresión */
+ 
   filter: drop-shadow(2px 3px 3px rgba(77, 15, 26, 0.15)); 
 }
 
@@ -275,7 +273,7 @@ body {
   font-weight: bold;
   width: 70px;
   padding: 15px 0;
-  background: #fcfaf7;
+  background: #ffffff;
   border-radius: 12px;
   border: 2px solid #bf953f;
   color: #4d0f1a;
@@ -308,7 +306,7 @@ body {
   font-size: 52px;
   font-weight: 700;
   margin: 36px 0 15px 0;
-  color: #bf953f;
+  color: #4d0f1a;
 }
 
 .nombre-completo,
@@ -322,8 +320,7 @@ body {
   background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-   -webkit-text-stroke: 1px #000000;
-  filter: drop-shadow(1.5px 2px 2px rgba(0, 0, 0, 0.3));
+
   filter: drop-shadow(1.5px 2px 2px rgba(77, 15, 26, 0.12));
 }
 
