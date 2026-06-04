@@ -253,7 +253,7 @@ body {
 .rosa {
     display: block;      /* Para que se comporte como un bloque y sea fácil de centrar */
     margin: 10px auto;   /* Centra la imagen horizontalmente */
-    width: 100px;        /* AJUSTA ESTE VALOR para cambiar el tamaño (ej: 50px, 150px) */
+    width: 20px;        /* AJUSTA ESTE VALOR para cambiar el tamaño (ej: 50px, 150px) */
     height: auto;        /* Mantiene la proporción original */
 }
 
