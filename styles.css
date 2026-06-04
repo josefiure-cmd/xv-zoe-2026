@@ -255,6 +255,17 @@ body {
     margin: 10px auto;   /* Centra la imagen horizontalmente */
     width: 100px;        /* AJUSTA ESTE VALOR para cambiar el tamaño (ej: 50px, 150px) */
     height: auto;        /* Mantiene la proporción original */
+   animation: girar 10s linear infinite; /* Aplica la animación */
+}
+
+/* Definición del movimiento */
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 /* ------------------------------
