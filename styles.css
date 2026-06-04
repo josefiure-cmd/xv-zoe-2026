@@ -120,7 +120,14 @@ body {
     line-height: 1.2;
 }
 
+.carta-mini {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
+.carta-mini:hover {
+  transform: scale(1.1); /* La carta crece un poquito al pasar el mouse encima */
+}
 
 /* ------------------------------
    PORTADA (SPLASH) - CON ROSAS PEQUEÑAS EN 2 ESQUINAS
