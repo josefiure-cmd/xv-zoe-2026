@@ -249,24 +249,28 @@ body {
     margin-bottom: -15px; /* Ajuste negativo para que la corona se 'asiente' cerca de MIS */
     z-index: 1; /* Asegura que esté en la capa correcta */
 }
-
 .rosa {
-    display: block;      /* Para que se comporte como un bloque y sea fácil de centrar */
-    margin: 10px auto;   /* Centra la imagen horizontalmente */
-    width: 100px;        /* AJUSTA ESTE VALOR para cambiar el tamaño (ej: 50px, 150px) */
-    height: auto;        /* Mantiene la proporción original */
-   animation: girar 10s linear infinite; /* Aplica la animación */
+    display: block;
+    margin: 10px auto;
+    width: 100px; 
+    height: auto;
+    
+    /* Añadimos prefijos para móviles (WebKit es el motor de Chrome/Safari en móviles) */
+    -webkit-animation: girar 10s linear infinite;
+    animation: girar 10s linear infinite;
 }
 
-/* Definición del movimiento */
-@keyframes girar {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+/* Definición del movimiento con prefijos */
+@-webkit-keyframes girar {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
 }
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 
 /* ------------------------------
    BOTÓN DE MÚSICA FLOTANTE Y REDONDO
