@@ -234,7 +234,7 @@ body {
   filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1)); /* Sombra suave para que resalte */
 }
 
-/* Contenedor principal para asegurar centrado */
+/* Contenedor principal para asegurar centrado corona*/
 .top {
     display: flex;
     flex-direction: column;
