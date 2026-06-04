@@ -111,6 +111,16 @@ body {
   max-width: 100%;    /* Evita que se desborde en pantallas pequeñas */
 }
 
+.frase-invitacion {
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem; /* Ajusta este tamaño según prefieras */
+    color: #4d0f1a;    /* Puedes usar el color de tu tema */
+    margin-bottom: 10px;
+    padding: 0 20px;
+    line-height: 1.2;
+}
+
+
 
 /* ------------------------------
    PORTADA (SPLASH) - CON ROSAS PEQUEÑAS EN 2 ESQUINAS
