@@ -233,6 +233,23 @@ body {
   height: auto;        /* Mantiene la proporción */
   filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1)); /* Sombra suave para que resalte */
 }
+
+/* Contenedor principal para asegurar centrado */
+.top {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente todo el contenido */
+    text-align: center;
+}
+
+/* Estilos específicos para la corona */
+.corona-quinceanera {
+    width: 100px; /* Ajusta este tamaño según prefieras */
+    height: auto;
+    margin-bottom: -15px; /* Ajuste negativo para que la corona se 'asiente' cerca de MIS */
+    z-index: 1; /* Asegura que esté en la capa correcta */
+}
+
 /* ------------------------------
    BOTÓN DE MÚSICA FLOTANTE Y REDONDO
 ------------------------------ */
